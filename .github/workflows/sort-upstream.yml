@@ -1,0 +1,27 @@
+name: Sorting upstream ucms
+on:
+  schedule:
+    - cron: "10 0 * * *" # run at the start of every day after functions.py update
+  workflow_dispatch:
+
+jobs:
+  sort-upstream:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checking out repository code
+        uses: actions/checkout@v3
+
+      - name: Delete old upstream folder
+        run: rm -rf ./upstream
+
+      - name: Cloning Upstream overlays
+        run: git clone https://chromium.googlesource.com/chromiumos/overlays/board-overlays --depth 1
+
+      - name: Sorting ucms
+        run: sudo python3 sort-ucms.py
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          # Optional. Commit message for the created commit.
+          # Defaults to "Apply automatic changes"
+          commit_message: Update upstream ucms
