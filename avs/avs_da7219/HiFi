@@ -29,6 +29,7 @@ SectionVerb {
 }
 
 SectionDevice."Headphone" {
+	Comment "Headphone"
 	Value {
 		PlaybackPCM "hw:avsda7219,1"
 		PlaybackMixerElem "Headphone"
@@ -48,6 +49,7 @@ SectionDevice."Headphone" {
 }
 
 SectionDevice."Line Out" {
+	Comment "Line Out"
 	Value {
 		PlaybackPCM "hw:avsda7219,1"
 		PlaybackMixerElem "Headphone"
@@ -67,6 +69,7 @@ SectionDevice."Line Out" {
 }
 
 SectionDevice."Mic" {
+	Comment "Mic"
 	Value {
 		CapturePCM "hw:avsda7219,1"
 		CaptureMixerElem "Headset Mic"

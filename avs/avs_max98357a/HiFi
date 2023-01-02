@@ -9,6 +9,7 @@ SectionVerb {
 }
 
 SectionDevice."Speaker" {
+	Comment "Speaker"
 	Value {
 		PlaybackPCM "hw:avsmax98357a,1"
 		DspName "speaker_eq"
