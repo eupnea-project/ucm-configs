@@ -8,7 +8,7 @@ SectionVerb {
 	]
 }
 
-SectionDevice."Internal Mic".0 {
+SectionDevice."Internal Mic" {
 	Value {
 		CapturePCM "hw:avsdmic,2"
 		CaptureChannelMap "0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1"
