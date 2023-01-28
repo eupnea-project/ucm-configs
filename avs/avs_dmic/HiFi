@@ -9,8 +9,11 @@ SectionVerb {
 }
 
 SectionDevice."Internal Mic" {
+	Comment "Internal Microphone"
+
 	Value {
 		CapturePCM "hw:avsdmic,2"
+		CaptureChannels 4
 		CaptureChannelMap "0 0 -1 -1 -1 -1 -1 -1 -1 -1 -1"
 		IntrinsicSensitivity "-2600"
 	}
