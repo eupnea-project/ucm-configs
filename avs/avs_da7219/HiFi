@@ -48,26 +48,6 @@ SectionDevice."Headphone" {
 	]
 }
 
-SectionDevice."Line Out" {
-	Comment "Line Out"
-	Value {
-		PlaybackPCM "hw:avsda7219,1"
-		PlaybackMixerElem "Headphone"
-		JackDev "avs_da7219 Headset Jack"
-		JackSwitch "6"
-	}
-	EnableSequence [
-		cdev "hw:avsda7219"
-		cset "name='Headphone Jack Switch' on"
-		cset "name='Headphone Switch' 1"
-	]
-	DisableSequence [
-		cdev "hw:avsda7219"
-		cset "name='Headphone Jack Switch' off"
-		cset "name='Headphone Switch' 0"
-	]
-}
-
 SectionDevice."Mic" {
 	Comment "Mic"
 	Value {
